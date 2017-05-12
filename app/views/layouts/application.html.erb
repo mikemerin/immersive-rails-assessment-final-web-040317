@@ -6,6 +6,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+    <% if logged_in? %>
+      <%= link_to "Episodes", episodes_path %>
+      <%= link_to "Appearances", appearances_path %>
+      <%= link_to "Guests", guests_path %>
+      <%= link_to "Log Out", logout_path, method: "delete" %>
+    <% end %>
+
+    <br>
+
   </head>
 
   <body>

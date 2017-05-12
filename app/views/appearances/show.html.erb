@@ -1,0 +1,9 @@
+<h2><%= link_to "Episode number #{@appearance.episode.id} from #{@appearance.episode.date}", episode_path(@appearance.id) %></h2>
+
+
+<h3><%= link_to "Featuring #{@appearance.guest.name}", guest_path(@appearance.guest)%></h3>
+
+<h3><%= "Booked by #{@appearance.user }"%></h3>
+
+<%= link_to "Edit this Appearance", edit_appearance_path(@appearance) %><br>
+<%= link_to "Return to Appearances", appearances_path %>

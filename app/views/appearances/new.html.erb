@@ -1,9 +1,5 @@
-<h1>Create an Appearance</h1>
+<h1><%= "New Appearence Booked by current_user.username" %></h1>
 
-<%= form_for @appearance do |f| %>
-  <%= f.label :rating %>
-  <%= f.number_field :rating, in: (1..5) %>
-  <%= f.collection_select :episode_id, Episode.all, :id, :date %>
-  <%= f.collection_select :guest_id, Guest.all, :id, :name %>
-  <%= f.submit %>
-<% end %>
+<%= render 'form' %><br>
+
+<%= link_to "Back to All Appearences", appearances_path %>
